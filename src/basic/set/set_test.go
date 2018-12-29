@@ -16,7 +16,7 @@ func testSetLenAndContains(t *testing.T, newSet func() Set, typeName string) {
 	t.Logf("Got a %s value: %v.", typeName, set)
 	expectedLen := len(expectedElemMap)
 	if set.Len() != expectedLen {
-		t.Errorf("ERROR: The length of %s value %d is not %d!\n",
+		t.Errorf("ERROR: The length of %d value %s is not %d!\n",
 			set.Len(), typeName, expectedLen)
 		t.FailNow()
 	}
@@ -55,7 +55,7 @@ func testSetAdd(t *testing.T, newSet func() Set, typeName string) {
 	t.Logf("The %s value: %v.", typeName, set)
 	expectedLen := len(expectedElemMap)
 	if set.Len() != expectedLen {
-		t.Errorf("ERROR: The length of %s value %d is not %d!\n",
+		t.Errorf("ERROR: The length of %d value %s is not %d!\n",
 			set.Len(), typeName, expectedLen)
 		t.FailNow()
 	}
